@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Comic Neue', cursive;
+    background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
+}
+
+.cards {
+    display: flex;
+    height: 600px;
+    width: 800px;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    width: 50%;
+    background-size:cover;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+.one {
+    background-image: url('./img/pexels-andrea-piacquadio-3769021.jpg');
+    background-position-x: -260px;
+}
+
+.two {
+    background-image: url('./img/pexels-andrea-piacquadio-3778611.jpg');
+    background-position-x: -340px;
+}
+
+button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: crosshair;
+    transition: color 0.4s;
+    z-index:10;
+}
+
+button:hover {
+    color: white;
+}
+
+/* https://bennettfeely.com/clippy/ */
+button:hover~.text {
+    clip-path: circle(120% at 50% 90%);
+
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 60px 30px;
+    background-color: rgba(0,0,0,0.8);
+    color: rgb(233, 233, 233);
+    font-size: 13px;
+    clip-path: circle(0 at 50% 90%);
+    transition: clip-path 0.8s;
+    
+}
+
+h1 {
+    color: rgb(182,179,97);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: rgb(141,138,138);
+}
